@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ltnet.shopdemo.dao.ProductDao">
+    <resultMap id="productResultMap" type="com.ltnet.shopdemo.entity.Product">
+        <result column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="count" property="count" />
+        <result column="saled" property="saled" />
+        <result column="version" property="version" />
+    </resultMap>
+
+    <select id="getProductList" resultMap="productResultMap">
+        SELECT id, name, count, saled, version FROM tblProduct
+    </select>
+
+    <select id="getProductById" parameterType="int" resultMap="productResultMap">
+        SELECT id, name, count, saled, version FROM tblProduct WHERE id = #{id}
+    </select>
+
+    <update id="updateProduct" parameterType="com.ltnet.shopdemo.entity.Product">
+        UPDATE tblProduct
+        <set>
+            <if test="name != null">
+                name = #{name, jdbcType=VARCHAR},
+            </if>
+            <if test="count != null">
+                count = #{count, jdbcType=INTEGER},
+            </if>
+            <if test="saled != null">
+                saled = #{saled, jdbcType=INTEGER},
+            </if>
+            <if test="version != null">
+                version = #{version, jdbcType=INTEGER},
+            </if>
+        </set>
+        WHERE id = #{id, jdbcType=INTEGER}
+    </update>
+
+    <update id="saleProduct">
+        UPDATE tblProduct SET saled = saled + #{count, jdbcType=INTEGER} WHERE id = #{id, jdbcType=INTEGER}
+    </update>
+
+    <update id="saleProductByLock" parameterType="com.ltnet.shopdemo.entity.Product">
+        UPDATE tblProduct
+        SET saled = saled + #{count, jdbcType=INTEGER}, version = version + 1
+        WHERE id = #{id, jdbcType=INTEGER} AND version = #{version, jdbcType=INTEGER}
+    </update>
+</mapper>

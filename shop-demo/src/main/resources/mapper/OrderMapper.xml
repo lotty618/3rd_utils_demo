@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ltnet.shopdemo.dao.OrderDao">
+    <resultMap id="orderResultMap" type="com.ltnet.shopdemo.entity.Order">
+        <result column="id" property="id" />
+        <result column="pid" property="pid" />
+        <result column="name" property="name" />
+        <result column="status" property="status" />
+        <result column="count" property="count" />
+        <result column="addtime" property="addtime" />
+    </resultMap>
+
+    <select id="getOrderList" parameterType="int" resultMap="orderResultMap">
+        SELECT id, pid, name, status, count, addtime FROM tblOrder WHERE pid = #{pid}
+    </select>
+
+    <select id="getOrderById" parameterType="int" resultMap="orderResultMap">
+        SELECT id, pid, name, status, count, addtime FROM tblOrder WHERE id = #{id}
+    </select>
+
+    <insert id="addOrder" parameterType="com.ltnet.shopdemo.entity.Order">
+        INSERT INTO tblOrder(pid, name, status, count, addtime) VALUES(
+            #{pid, jdbcType=INTEGER},
+            #{name, jdbcType=VARCHAR},
+            #{status, jdbcType=INTEGER},
+            #{count, jdbcType=INTEGER},
+            #{addtime, jdbcType=VARCHAR}
+        )
+    </insert>
+
+    <update id="updateOrder" parameterType="com.ltnet.shopdemo.entity.Order">
+        UPDATE tblOrder
+        <set>
+            <if test="status != null">
+                SET status = #{status, jdbcType=INTEGER},
+            </if>
+            <if test="count != null">
+                SET status = #{count, jdbcType=INTEGER},
+            </if>
+        </set>
+        WHERE pid = #{pid, jdbcType=INTEGER}
+    </update>
+</mapper>
