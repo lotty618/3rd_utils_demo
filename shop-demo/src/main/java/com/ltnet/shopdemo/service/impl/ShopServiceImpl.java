@@ -85,7 +85,7 @@ public class ShopServiceImpl implements ShopService {
             return "Add order failed!";
         }
 
-        //6. 使用Redis，并将创建订单放入消息队列（不实时写入数据库）
+        //6. （配合上面5使用）使用Redis，并将创建订单放入消息队列（不实时写入数据库）
 //        rocketMQTemplate.convertAndSend("shopdemo-topic", order);
 //        sendMsg(order);
 
