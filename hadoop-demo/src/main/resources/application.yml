@@ -1,0 +1,6 @@
+
+#hdfs
+hdfs:
+  url: hdfs://192.168.210.200:9000
+  username: root
+  replication: 1

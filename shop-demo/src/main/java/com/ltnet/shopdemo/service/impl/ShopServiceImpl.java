@@ -113,7 +113,7 @@ public class ShopServiceImpl implements ShopService {
              * msg：发送的消息
              * arg：发送消息时传递的参数 通过该参数指定发送到哪个队列
              */
-            int queueNum = Integer.valueOf(String.valueOf(arg)) % mqs.size();
+            int queueNum = Integer.parseInt(String.valueOf(arg)) % mqs.size();
             System.out.println("Queue ID: " + queueNum + " Msg: " + new String(msg.getBody()));
             return mqs.get(queueNum);
         });
