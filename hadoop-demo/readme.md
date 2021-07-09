@@ -309,6 +309,19 @@ YARN_NODEMANAGER_USER=root
 
 关闭命令：  
 > _stop-all.sh_
+>
+
+## 注意
+1. 上传文件到HDFS出现如下错误：  
+> org.apache.hadoop.ipc.RemoteException(java.io.IOException): File /wc/hello.txt._COPYING_ could only be written to 0 of the 1 minReplication nodes. There are 0 datanode(s) running and 0 node(s) are excluded in this operation.  
+
+需要在服务器上配置/etc/hosts如下：
+```text
+192.168.210.200 master
+192.168.210.201 slave1
+192.168.210.202 slave2
+```
+
 
 # FYI
 * 官方教程

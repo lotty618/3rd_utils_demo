@@ -63,19 +63,21 @@
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Workspaces\IdeaProjects\3rd_utils_demo\shop-rocketmq-consumer-demo\src\main\java\com\ltnet\shoprocketmqconsumerdemo" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.ltnet.hadoopdemo.service.mapreduce.wordcount.impl" />
+      <recent name="com.ltnet.hadoopdemo.service.hdfs.impl" />
+      <recent name="com.ltnet.shopdemo.service.impl" />
+      <recent name="com.ltnet.elasticsearchdemo.service.impl" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.ltnet.shoprocketmqconsumerdemo.entity" />
       <recent name="com.ltnet.shopdemo.utils" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.ltnet.shopdemo.service.impl" />
-      <recent name="com.ltnet.elasticsearchdemo.service.impl" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Workspaces\IdeaProjects\3rd_utils_demo\shop-rocketmq-consumer-demo\src\main\java\com\ltnet\shoprocketmqconsumerdemo" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.HadoopDemoApplicationTests.contextLoads">
+  <component name="RunManager" selected="Spring Boot.HadoopDemoApplication">
     <configuration name="TestClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ltnet.shopdemo.test.TestClass" />
       <module name="shop-demo" />
@@ -194,7 +196,8 @@
       <workItem from="1624931626602" duration="7718000" />
       <workItem from="1625044761731" duration="2579000" />
       <workItem from="1625126869168" duration="14632000" />
-      <workItem from="1625649398334" duration="2337000" />
+      <workItem from="1625649398334" duration="3076000" />
+      <workItem from="1625706242462" duration="13762000" />
     </task>
     <servers />
   </component>
@@ -214,50 +217,74 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="428" height="438" key="DebuggerActiveHint" timestamp="1625135834713">
+    <state x="355" y="146" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1625735167382">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="428" height="438" key="DebuggerActiveHint/0.0.1280.689@0.0.1280.689" timestamp="1625135834713" />
+    <state x="355" y="146" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.689@0.0.1280.689" timestamp="1625735167382" />
+    <state x="446" y="51" key="#com.intellij.ide.util.MemberChooser" timestamp="1625733719646">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="446" y="51" key="#com.intellij.ide.util.MemberChooser/0.0.1280.689@0.0.1280.689" timestamp="1625733719646" />
+    <state width="649" height="515" key="DebuggerActiveHint" timestamp="1625794611652">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="649" height="515" key="DebuggerActiveHint/0.0.1280.689@0.0.1280.689" timestamp="1625794611652" />
     <state x="421" y="100" key="FileChooserDialogImpl" timestamp="1625036683939">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="421" y="100" key="FileChooserDialogImpl/0.0.1280.689@0.0.1280.689" timestamp="1625036683939" />
-    <state width="1237" height="204" key="GridCell.Tab.0.bottom" timestamp="1625450353030">
+    <state width="1237" height="155" key="GridCell.Tab.0.bottom" timestamp="1625794754393">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="204" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1625450353030" />
-    <state width="1237" height="204" key="GridCell.Tab.0.center" timestamp="1625450353030">
+    <state width="1237" height="155" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1625794754393" />
+    <state width="1237" height="155" key="GridCell.Tab.0.center" timestamp="1625794754393">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="204" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1625450353030" />
-    <state width="1237" height="204" key="GridCell.Tab.0.left" timestamp="1625450353030">
+    <state width="1237" height="155" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1625794754393" />
+    <state width="1237" height="155" key="GridCell.Tab.0.left" timestamp="1625794754393">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="204" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1625450353030" />
-    <state width="1237" height="204" key="GridCell.Tab.0.right" timestamp="1625450353030">
+    <state width="1237" height="155" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1625794754393" />
+    <state width="1237" height="155" key="GridCell.Tab.0.right" timestamp="1625794754393">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="204" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1625450353030" />
-    <state width="1237" height="204" key="GridCell.Tab.1.bottom" timestamp="1625450353031">
+    <state width="1237" height="155" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1625794754393" />
+    <state width="1237" height="313" key="GridCell.Tab.1.bottom" timestamp="1625794553406">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="204" key="GridCell.Tab.1.bottom/0.0.1280.689@0.0.1280.689" timestamp="1625450353031" />
-    <state width="1237" height="204" key="GridCell.Tab.1.center" timestamp="1625450353030">
+    <state width="1237" height="313" key="GridCell.Tab.1.bottom/0.0.1280.689@0.0.1280.689" timestamp="1625794553406" />
+    <state width="1237" height="313" key="GridCell.Tab.1.center" timestamp="1625794553405">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="204" key="GridCell.Tab.1.center/0.0.1280.689@0.0.1280.689" timestamp="1625450353030" />
-    <state width="1237" height="204" key="GridCell.Tab.1.left" timestamp="1625450353030">
+    <state width="1237" height="313" key="GridCell.Tab.1.center/0.0.1280.689@0.0.1280.689" timestamp="1625794553405" />
+    <state width="1237" height="313" key="GridCell.Tab.1.left" timestamp="1625794553405">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="204" key="GridCell.Tab.1.left/0.0.1280.689@0.0.1280.689" timestamp="1625450353030" />
-    <state width="1237" height="204" key="GridCell.Tab.1.right" timestamp="1625450353031">
+    <state width="1237" height="313" key="GridCell.Tab.1.left/0.0.1280.689@0.0.1280.689" timestamp="1625794553405" />
+    <state width="1237" height="313" key="GridCell.Tab.1.right" timestamp="1625794553405">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="204" key="GridCell.Tab.1.right/0.0.1280.689@0.0.1280.689" timestamp="1625450353031" />
-    <state width="647" height="351" key="XDebugger.FullValuePopup" timestamp="1625127408578">
+    <state width="1237" height="313" key="GridCell.Tab.1.right/0.0.1280.689@0.0.1280.689" timestamp="1625794553405" />
+    <state width="1237" height="177" key="GridCell.Tab.2.bottom" timestamp="1625794366520">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="647" height="351" key="XDebugger.FullValuePopup/0.0.1280.689@0.0.1280.689" timestamp="1625127408578" />
+    <state width="1237" height="177" key="GridCell.Tab.2.bottom/0.0.1280.689@0.0.1280.689" timestamp="1625794366520" />
+    <state width="1237" height="177" key="GridCell.Tab.2.center" timestamp="1625794366520">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="1237" height="177" key="GridCell.Tab.2.center/0.0.1280.689@0.0.1280.689" timestamp="1625794366520" />
+    <state width="1237" height="177" key="GridCell.Tab.2.left" timestamp="1625794366520">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="1237" height="177" key="GridCell.Tab.2.left/0.0.1280.689@0.0.1280.689" timestamp="1625794366520" />
+    <state width="1237" height="177" key="GridCell.Tab.2.right" timestamp="1625794366520">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="1237" height="177" key="GridCell.Tab.2.right/0.0.1280.689@0.0.1280.689" timestamp="1625794366520" />
+    <state width="647" height="351" key="XDebugger.FullValuePopup" timestamp="1625717045195">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state width="647" height="351" key="XDebugger.FullValuePopup/0.0.1280.689@0.0.1280.689" timestamp="1625717045195" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -266,6 +293,11 @@
           <url>file://$PROJECT_DIR$/hadoop-demo/src/main/java/com/ltnet/hadoopdemo/utils/HdfsUtil.java</url>
           <line>170</line>
           <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/hadoop-demo/src/main/java/com/ltnet/hadoopdemo/service/mapreduce/wordcount/WordCountMap.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
