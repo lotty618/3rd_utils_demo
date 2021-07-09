@@ -24,4 +24,23 @@ public class HdfsServiceImpl implements HdfsService {
     public String getFileList(String path) {
         return hdfsUtil.listFiles(path, null).toString();
     }
+
+    @Override
+    public String read(String path) {
+        try {
+            return hdfsUtil.read(path);
+        } catch (Exception e) {
+            return "Read Error!";
+        }
+    }
+
+    @Override
+    public boolean get(String src, String dst) {
+        return hdfsUtil.get(src, dst);
+    }
+
+    @Override
+    public boolean put(boolean delSrc, boolean overwrite, String file, String dstPath) {
+        return hdfsUtil.put(delSrc, overwrite, file, dstPath);
+    }
 }

@@ -10,7 +10,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -187,5 +186,105 @@ public class HdfsUtil {
             inputStream.close();
             fs.close();
         }
+    }
+
+    /**
+     * upload file to hdfs
+     * @param delSrc
+     * @param overwrite
+     * @param file
+     */
+    public boolean put(boolean delSrc, boolean overwrite, String file, String dstPath) {
+        boolean ret = false;
+
+        // 源文件路径
+        Path localSrcPath = new Path(file);
+        // 目标文件路径
+        Path hdfsDstPath = new Path(generateHdfsPath(dstPath));
+
+        FileSystem fs = null;
+
+        try {
+            fs = getFileSystem();
+
+            fs.copyFromLocalFile(delSrc, overwrite, localSrcPath, hdfsDstPath);
+            ret = true;
+        } catch (Exception e) {
+            e.printStackTrace();
+
+        } finally {
+            close(fs);
+        }
+
+        return ret;
+    }
+
+    /**
+     * Read file
+     * @param path
+     * @return
+     * @throws Exception
+     */
+    public String read(String path) throws Exception {
+        if (StringUtils.isEmpty(path)) {
+            return "Path is empty";
+        }
+
+        if (!checkExists(path)) {
+            return "Path is not exists";
+        }
+
+        FileSystem fs = getFileSystem();
+        // 源文件路径
+        Path srcPath = new Path(path);
+        FSDataInputStream inputStream = null;
+
+        try {
+            inputStream = fs.open(srcPath);
+            // 防止中文乱码
+            BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
+            String line = "";
+            StringBuffer sb = new StringBuffer();
+            while ((line = reader.readLine()) != null) {
+                sb.append(line + "\n");
+            }
+            return sb.toString();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            inputStream.close();
+            close(fs);
+        }
+
+        return "Error";
+    }
+
+    /**
+     * download file
+     * @param src
+     * @param dst
+     * @return
+     */
+    public boolean get(String src, String dst) {
+        boolean ret = false;
+
+        // HDFS文件路径
+        Path hdfsSrcPath = new Path(src);
+        // 本地文件路径
+        Path localDstPath = new Path(dst);
+
+        FileSystem fs = null;
+        try {
+            fs = getFileSystem();
+
+            fs.copyToLocalFile(hdfsSrcPath, localDstPath);
+            ret = true;
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            close(fs);
+        }
+
+        return ret;
     }
 }

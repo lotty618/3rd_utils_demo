@@ -4,6 +4,7 @@ import com.ltnet.hadoopdemo.service.hdfs.HdfsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -27,5 +28,20 @@ public class HdfsController {
     @RequestMapping("/list/{path}")
     public String getFileList(@PathVariable String path) {
         return hdfsService.getFileList(path);
+    }
+
+    @RequestMapping("/put/{path}")
+    public String put(@PathVariable String path) {
+        return "";
+    }
+
+    @RequestMapping("/read")
+    public String read(@RequestParam String path) {
+        return hdfsService.read(path);
+    }
+
+    @RequestMapping("/download")
+    public String download(@RequestParam("src") String src, @RequestParam("dst") String dst) {
+        return hdfsService.get(src, dst) ? "Success" : "Failed";
     }
 }
