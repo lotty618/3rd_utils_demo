@@ -30,9 +30,9 @@ public class HdfsController {
         return hdfsService.getFileList(path);
     }
 
-    @RequestMapping("/put/{path}")
-    public String put(@PathVariable String path) {
-        return "";
+    @RequestMapping("/put")
+    public String put(@RequestParam("src") String src, @RequestParam("dst") String dst) {
+        return hdfsService.put(false, true, src, dst) ? "Success" : "Failed";
     }
 
     @RequestMapping("/read")
