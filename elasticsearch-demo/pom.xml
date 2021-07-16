@@ -36,6 +36,7 @@
 <!--            <version>${elasticsearch.version}</version>-->
 <!--        </dependency>-->
 
+        <!-- ElasticSearch brach -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
