@@ -6,11 +6,13 @@ import org.elasticsearch.client.RestClientBuilder;
 import org.elasticsearch.client.RestHighLevelClient;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class EsConfig {
+@Configuration
+public class ESConfig {
     /** 协议 */
     @Value("${elasticsearch.schema:http}")
     private String schema;

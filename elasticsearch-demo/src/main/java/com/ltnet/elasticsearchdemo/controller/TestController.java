@@ -1,7 +1,7 @@
 package com.ltnet.elasticsearchdemo.controller;
 
-import com.ltnet.elasticsearchdemo.entity.StockDateK;
-import com.ltnet.elasticsearchdemo.service.StockDateKService;
+import com.ltnet.elasticsearchdemo.entity.ESStockDateK;
+import com.ltnet.elasticsearchdemo.service.ESStockDateKService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,14 +13,14 @@ import java.util.List;
 @RestController
 public class TestController {
     @Autowired
-    StockDateKService stockDateKService;
+    ESStockDateKService stockDateKService;
 
     @RequestMapping("/{code}")
     public String getDateKList(@PathVariable String code) {
-        List<StockDateK> lstStockDateK = stockDateKService.getStockDateKListByCode(code);
+        List<ESStockDateK> lstStockDateK = stockDateKService.getStockDateKListByCode(code);
         String ret = "";
 
-        for (StockDateK stockDateK : lstStockDateK) {
+        for (ESStockDateK stockDateK : lstStockDateK) {
             ret += stockDateK.toString();
         }
 

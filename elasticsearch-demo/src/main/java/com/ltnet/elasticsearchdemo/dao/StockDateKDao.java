@@ -1,12 +1,13 @@
 package com.ltnet.elasticsearchdemo.dao;
 
-import com.ltnet.elasticsearchdemo.entity.StockDateK;
+import com.ltnet.elasticsearchdemo.entity.ESStockDateK;
 import org.apache.ibatis.annotations.Mapper;
-import org.springframework.stereotype.Component;
 
 import java.util.List;
+import java.util.Map;
 
+//@Mapper
 public interface StockDateKDao {
-    List<StockDateK> getStockDateKList();
-    List<StockDateK> getStockDateKListByCode(String code);
+    List<ESStockDateK> getStockDateKList(Map<String, Object> page);
+    List<ESStockDateK> getStockDateKListByCode(String code);
 }

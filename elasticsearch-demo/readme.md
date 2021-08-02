@@ -20,6 +20,11 @@ su esuser
 ```
 ### 安装ElasticSearch-head插件
 1.安装Node环境
+> git clone git://github.com/mobz/elasticsearch-head.git  
+cd elasticsearch-head  
+npm install  
+npm run start  
+
 ### 集群部署
 
 修改配置文件config/elasticsearch.yml如下：
@@ -37,7 +42,10 @@ transport.tcp.compress: true
 # 配置集群的主机地址，配置之后集群的主机之间可以自动发现（可以带上端口，例如 127.0.0.1:9300）
 discovery.seed_hosts: ["192.168.210.185", "192.168.210.200", "192.168.210.201"]
 # 初始的候选 master 节点列表。初始主节点应通过其 node.name 标识，默认为其主机名。确保 cluster.initial_master_nodes 中的值与 node.name 完全匹配。
-cluster.initial_master_nodes: ["node-1", "node-2", "node-3"]
+cluster.initial_master_nodes: ["node-1", "node-2", "node-3"]  
+
+http.cors.enabled: true  
+http.cors.allow-origin: "*"  
 ```
 
 

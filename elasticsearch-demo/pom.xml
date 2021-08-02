@@ -15,7 +15,7 @@
     <description>Demo project for Spring Boot</description>
     <properties>
         <java.version>1.8</java.version>
-        <elasticsearch.version>7.11.1</elasticsearch.version>
+        <elasticsearch.version>7.13.3</elasticsearch.version>
     </properties>
     <dependencies>
         <dependency>
@@ -36,7 +36,7 @@
 <!--            <version>${elasticsearch.version}</version>-->
 <!--        </dependency>-->
 
-        <!-- ElasticSearch brach -->
+        <!-- ElasticSearch branch -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
