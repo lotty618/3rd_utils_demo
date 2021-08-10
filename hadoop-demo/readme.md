@@ -206,6 +206,25 @@ yarn http ui:				8088/8088
   </property>
 </configuration>
 ```
+
+* 此处可以做多目录配置，提高可用性  
+```xml
+<configuration>
+  <property>
+    <name>dfs.replication</name>
+    <value>2</value>
+  </property>
+  <property>
+    <name>dfs.namenode.name.dir</name>
+    <value>file:///${hadoop.tmp.dir}/dfs/name1,file:///${hadoop.tmp.dir}/dfs/name2</value>
+  </property>
+  <property>
+    <name>dfs.datanode.data.dir</name>
+    <value>file:///${hadoop.tmp.dir}/dfs/data1,file:///${hadoop.tmp.dir}/dfs/data2</value>
+  </property>
+</configuration>
+```
+
 4.配置 yarn-site.xml 文件（只在master做）  
 * 编辑yarn-site.xml文件
 ```xml
